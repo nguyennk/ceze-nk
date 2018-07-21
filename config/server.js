@@ -10,13 +10,13 @@ const dbUrl = process.env.DB_URL || `mongodb://${dbCred}${dbHost}:${dbPort}/${db
 
 module.exports = {
   // used by Store (server side)
-  apiBaseUrl: `http://localhost:3001/api/v1`,
+  apiBaseUrl: `http://45.58.52.177:3001/api/v1`,
 
   // used by Store (server and client side)
-  ajaxBaseUrl: `http://localhost:3001/ajax`,
+  ajaxBaseUrl: `http://45.58.52.177:3001/ajax`,
 
   // Access-Control-Allow-Origin
-  storeBaseUrl: `http://localhost:3000`,
+  storeBaseUrl: `http://45.58.52.177:3000`,
 
   // used by API
   adminLoginUrl: '/admin/login',
@@ -38,10 +38,10 @@ module.exports = {
   },
 
   // key to sign tokens
-  jwtSecretKey: 'qcBQaAArS2TRFXSK',
+  jwtSecretKey: '-',
 
   // key to sign store cookies
-  cookieSecretKey: 'woZ9znmO8ZdLyveo',
+  cookieSecretKey: '-',
 
   // path to uploads
   categoriesUploadPath: 'public/content/images/categories',
