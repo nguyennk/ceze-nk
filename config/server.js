@@ -1,5 +1,7 @@
 // config used by server side only
-const dbHost = process.env.DB_HOST || '127.0.0.1';
+const serverPath = `localhost`;
+const dbPath = `45.58.52.177`;
+const dbHost = process.env.DB_HOST || dbPath;
 const dbPort = process.env.DB_PORT || 27017;
 const dbName = process.env.DB_NAME || 'aquashop'
 const dbUser = process.env.DB_USER || '';
@@ -10,13 +12,13 @@ const dbUrl = process.env.DB_URL || `mongodb://${dbCred}${dbHost}:${dbPort}/${db
 
 module.exports = {
   // used by Store (server side)
-  apiBaseUrl: `http://45.58.52.177:3001/api/v1`,
+  apiBaseUrl: `http://${serverPath}:3001/api/v1`,
 
   // used by Store (server and client side)
-  ajaxBaseUrl: `http://45.58.52.177:3001/ajax`,
+  ajaxBaseUrl: `http://${serverPath}:3001/ajax`,
 
   // Access-Control-Allow-Origin
-  storeBaseUrl: `http://45.58.52.177:3000`,
+  storeBaseUrl: `http://${serverPath}:3000`,
 
   // used by API
   adminLoginUrl: '/admin/login',
@@ -56,7 +58,7 @@ module.exports = {
   themeAssetsUploadUrl: '/assets/images',
 
   // store UI language
-  language: 'en',
+  language: 'vi',
 
   // used by API
   orderStartNumber: 1000,
